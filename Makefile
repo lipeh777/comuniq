@@ -9,12 +9,13 @@ start:
 
 # Atualiza o sistema
 atualizar-maquina:
-	sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade 
+	sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
 
 # Prepara o ambiente do desenvolvedor
 ambiente-dev: atualizar-maquina
 	sudo apt-get install php7.2-cli libapache2-mod-php7.2 php7.2-mysql php7.2-curl php-memcached php7.2-dev php7.2-sqlite3 php7.2-mbstring php7.2-gd php7.2-json
 	sudo apt-get install composer
+	sudo apt install php-xml php-mbstring
 
 # Prepara o ambiente do servidor(SÓ PARA O BANCO)
 ambiente-server: atualizar-maquina
@@ -27,7 +28,7 @@ BD:
 	@mysql -u root -p --execute="drop database if exists ComuniQ; create database ComuniQ; drop user if exists master; CREATE USER 'master' IDENTIFIED BY 'origin'; GRANT ALL PRIVILEGES ON ComuniQ . * TO master;"
 	php artisan migrate:refresh --seed
 
-# Iniciar o servidor 
+# Iniciar o servidor
 start-serve: start
 	php artisan serve
 
@@ -91,3 +92,4 @@ git-adely:
 	git config --global user.email "adely09alexandra@gmail.com"
 	@git config --global user.name
 	@git config --global user.email
+
