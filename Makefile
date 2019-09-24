@@ -1,12 +1,10 @@
-# bd-conf:
-# 	@echo "exubaca"
-
 # Copia os arquivos ocultos no .git-ignore
-start:
-	@cp .env.example .env
-	@make bd-conf
-	@php artisan key:generate
 
+start:
+	@composer install
+	@cp .env.example .env
+	@php artisan key:generate
+	
 # Atualiza o sistema
 atualizar-maquina:
 	sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
@@ -42,8 +40,8 @@ git-filipe:
 git-morgana:
 	git config --global user.name "k0rgana"
 	git config --global user.email "anagrom1999@gmail.com"
-	@git config --global user.name
 	@git config --global user.email
+	@git config --global user.name
 
 git-leonardo:
 	git config --global user.name "leonardolfp"
@@ -93,3 +91,13 @@ git-adely:
 	@git config --global user.name
 	@git config --global user.email
 
+# commit:
+# ifndef id
+# 	@echo "falta o id da issue"
+# else
+# ifndef m
+# 	@echo "falta a mensagem"
+# else
+# 	git commit -m "GH-"$(id)" - "$(m)
+# endif
+# endif
