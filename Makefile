@@ -34,60 +34,80 @@ start-serve: start
 git-filipe:
 	git config --global user.name "filipeandrev"
 	git config --global user.email "filipe.andrev7@gmail.com"
+	git config user.name "filipeandrev"
+	git config user.email "filipe.andrev7@gmail.com"
 	@git config --global user.name
 	@git config --global user.email
 
 git-morgana:
 	git config --global user.name "k0rgana"
 	git config --global user.email "anagrom1999@gmail.com"
+	git config user.name "k0rgana"
+	git config user.email "anagrom1999@gmail.com" 
 	@git config --global user.email
 	@git config --global user.name
 
 git-leonardo:
 	git config --global user.name "leonardolfp"
 	git config --global user.email "leonardolfp15@gmail.com"
+	git config user.name "leonardolfp"
+	git config user.email "leonardolfp15@gmail.com"
 	@git config --global user.name
 	@git config --global user.email
 
 git-guilherme:
 	git config --global user.name "GuilhermeH6"
 	git config --global user.email "guilhermeholanda870@gmail.com"
+	git config user.name "GuilhermeH6"
+	git config user.email "guilhermeholanda870@gmail.com"
 	@git config --global user.name
 	@git config --global user.email
 
 git-jhonny:
 	git config --global user.name "JonissonGomes"
 	git config --global user.email "joni_gomes@hotmail.com"
+	git config user.name "JonissonGomes"
+	git config user.email "joni_gomes@hotmail.com"
 	@git config --global user.name
 	@git config --global user.email
 
 git-alisson:
 	git config --global user.name "AlissonThyago"
 	git config --global user.email "alissonthiagoamorim@gmail.com"
+	git config user.name "AlissonThyago"
+	git config user.email "alissonthiagoamorim@gmail.com"
 	@git config --global user.name
 	@git config --global user.email
 
 git-perola:
 	git config --global user.name "perolasanja"
 	git config --global user.email "peroladiniz2013@gmail.com"
+	git config user.name "perolasanja"
+	git config user.email "peroladiniz2013@gmail.com"
 	@git config --global user.name
 	@git config --global user.email
 
 git-juciele:
 	git config --global user.name "jucielefernandes"
 	git config --global user.email "juciele.bol@gmail.com"
+	git config user.name "jucielefernandes"
+	git config user.email "juciele.bol@gmail.com"
 	@git config --global user.name
 	@git config --global user.email
 
 git-izidorio:
 	git config --global user.name "lipeh777"
 	git config --global user.email "fizidorio7@gmail.com"
+	git config user.name "lipeh777"
+	git config user.email "fizidorio7@gmail.com"
 	@git config --global user.name
 	@git config --global user.email
 
 git-adely:
 	git config --global user.name "adelyAlexandr"
 	git config --global user.email "adely09alexandra@gmail.com"
+	git config user.name "adelyAlexandr"
+	git config user.email "adely09alexandra@gmail.com"
 	@git config --global user.name
 	@git config --global user.email
 
