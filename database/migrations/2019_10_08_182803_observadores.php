@@ -13,11 +13,12 @@ class Observadores extends Migration
      */
     public function up()
     {
-        Schema::create('observadores', function (Blueprint $table)
-            $table->bigIncremenst('id');
+        Schema::create('observadores', function (Blueprint $table){
+            $table->bigIncrements('id');
             $table->foreign('usuario_id')->references('id')->on('observadores');
             $table->foreign('chamados_id')->references('id')->on('observadores');
             $table->timestamps();
+        });
     }
 
     /**
