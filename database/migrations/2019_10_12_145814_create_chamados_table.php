@@ -15,13 +15,12 @@ class CreateChamadosTable extends Migration
     {
         Schema::create('chamados', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->primary('chamados_id');
             $table->string('descricao', 255)->nullable();//nullable indica que o campo é opcional.
             $table->timestamps();
             $table->integer('fk_usuario_id');
-            $table->foreign('fk_usuario_id')->references('usuario_id')->on('usuarios')->unsigned();
+            $table->foreign('fk_usuario_id')->references('id')->on('usuarios')->unsigned();
             $table->integer('fk_itens_de_patrimonio_id');
-            $table->foreign('fk_itens_de_patrimonio_id')->references('itens_de_patrimônio_id')->on('itenspatrimonio')->unsigned();
+            $table->foreign('fk_itens_de_patrimonio_id')->references('id')->on('itenspatrimonio')->unsigned();
             // $table->integer('chamado_pai');
             // $table->foreign('chamado_pai')->references('chamado_pai')->on('chamados');
         });
