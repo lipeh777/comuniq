@@ -15,9 +15,12 @@ class Observadores extends Migration
     {
         Schema::create('observadores', function (Blueprint $table){
             $table->bigIncrements('id');
-            $table->foreign('usuario_id')->references('id')->on('observadores');
-            $table->foreign('chamados_id')->references('id')->on('observadores');
+            $table->unsignedBigInteger('fk_users_id');
+            $table->unsignedBigInteger('fk_chamados_id');
             $table->timestamps();
+
+            // $table->foreign('fk_users_id')->references('id')->on('users');
+            // $table->foreign('fk_chamados_id')->references('id')->on('chamados');
         });
     }
 
