@@ -17,15 +17,16 @@ class CreateStatusChamadosTable extends Migration
             $table->bigIncrements('id');
             $table->text('comentario', 500)->nullable();
 
-            $table->unsignedBigInteger('fk_statuses_id');
+
+            $table->timestamps();
+            $table->unsignedBigInteger('fk_statuses_id')->nullable();
             $table->foreign('fk_statuses_id')->references('id')->on('statuses');
 
-            $table->unsignedBigInteger('fk_chamados_id');
+            $table->unsignedBigInteger('fk_chamados_id')->nullable();
             $table->foreign('fk_chamados_id')->references('id')->on('chamados');
             
-            $table->unsignedBigInteger('fk_users_id');
+            $table->unsignedBigInteger('fk_users_id')->nullable();
             $table->foreign('fk_users_id')->references('id')->on('users');
-            $table->timestamps();
         });
     }
 
