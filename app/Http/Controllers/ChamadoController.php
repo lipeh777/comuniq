@@ -8,14 +8,14 @@ use app\Chamado;
 class ChamadoController extends Controller {
     public function index(){
 
-        $products = Chamado::orderBy('created_at', 'description')->paginate(10);
+        $chamado = Chamado::orderBy('created_at', 'description')->paginate(10);
 
         // return view('chamado.index',['chamado' => $chamado]);
     }
 
     public function create(){
 
-    	return view('chamado.create');
+    	// return view('chamado.create');
 
     }
 
