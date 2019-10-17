@@ -63,7 +63,7 @@ git-guilherme:
 	@git config --global user.name
 	@git config --global user.email
 
-git-jhonny:
+git-joni:
 	git config --global user.name "JonissonGomes"
 	git config --global user.email "joni_gomes@hotmail.com"
 	git config user.name "JonissonGomes"
