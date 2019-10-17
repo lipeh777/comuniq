@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInstituicoesTable extends Migration
+class CreateItemPatrimoniosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateInstituicoesTable extends Migration
      */
     public function up()
     {
-        Schema::create('instituicoes', function (Blueprint $table) {
+        Schema::create('item_patrimonios', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('numero_tombamento');
+            $table->unsignedBigInteger('fk_instituicoes_id');
+            $table->foreign('fk_instituicoes_id')->references('id')->on('instituicoes');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateInstituicoesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('instituicoes');
+        Schema::dropIfExists('item_patrimonios');
     }
 }
