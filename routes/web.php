@@ -18,4 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/chamado', 'ChamadoController@index')->name('chamado');
+
+//rotas de chamado
+
+Route::get('/chamado', 'ChamadoController@index')->name('chamado_list');
+Route::get('/chamado', 'ChamadoController@create')->name('chamado_form');
+Route::get('/chamado', 'ChamadoController@store')->name('chamado_formSave');
