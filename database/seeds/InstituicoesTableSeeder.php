@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Instituicoes;
+// use App\Instituicoes;
 
 class InstituicoesTableSeeder extends Seeder
 {
@@ -12,10 +12,8 @@ class InstituicoesTableSeeder extends Seeder
      */
     public function run()
     {
-    	for ($i = 0; $i < 5; $i++){
-	        Instituicoes::create([
-				'name' => $faker->name,
-			]);
-		}
+        DB::table('instituicoes')->insert([
+            'name' => Str::random(10),
+        ]);
     }
 }
