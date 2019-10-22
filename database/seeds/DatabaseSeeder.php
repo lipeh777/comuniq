@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SetoresTableSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(ItemPatrimonioTableSeeder::class);
+        $this->call(ChamadoTipoTableSeeder::class);
     }
 }
