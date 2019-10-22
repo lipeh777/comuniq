@@ -16,7 +16,7 @@ class CreateItemPatrimoniosTable extends Migration
         Schema::create('item_patrimonios', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('numero_tombamento');
-            $table->unsignedBigInteger('fk_instituicoes_id');
+            $table->unsignedBigInteger('fk_instituicoes_id')->nullable();
             $table->foreign('fk_instituicoes_id')->references('id')->on('instituicoes');
             $table->timestamps();
         });
