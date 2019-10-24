@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\StatusChamados;
+use App\StatusChamado;
 
 class StatusChamadosTableSeeder extends Seeder
 {
@@ -12,15 +12,15 @@ class StatusChamadosTableSeeder extends Seeder
      */
     public function run()
     {
-        StatusChamados::create([
+        StatusChamado::create([
             'comentario' => 'espero que funcione',
         ]);
 
-        StatusChamados::create([
+        StatusChamado::create([
             'comentario' => 'é tudo culpa de matheus',
         ]);
 
-        StatusChamados::create([
+        StatusChamado::create([
             'comentario' => 'que demora',
         ]);
     }
