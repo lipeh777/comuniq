@@ -2,21 +2,7 @@
 
 @section('content')
 
-<div class="gn ai full-height" data-id="1" style="position: fixed; margin: auto; inset: 0px auto auto 0px; box-sizing: border-box; width: 1354px; height: 343.5px;">
-      <div class="header-wrapper c valign-wrapper" style="opacity: 0;">
-        <div class="d jt offset-s2 ci">
-          <h1>Startup!</h1>
-          <span class="dx">Show off your business in a whole new way.</span>
-          <button class="read-more"><i class="icon-caret-down"></i></button>
-        </div>
-      </div>
-      <div class="laptop-preview-sizer" style="transform: translate3d(-913.95px, -530.083px, 0px) scale(0.657434);">
-        <div class="laptop-preview"></div>
-        <div class="image-container et" style="background-image:url(//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/poly5.jpg?0)"></div>
-      </div>
-    </div>
-
-  <!-- Recepção -->
+<!-- Recepção -->
   <div id="index-banner container">
     <div class="section">
       <div class="container">
