@@ -14,15 +14,16 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
 
-<!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--Import materialize.css-->
-<link type="text/css" rel="stylesheet" href="{{asset('css/materialize.min.css')}}"  media="screen,projection"/>
-<!--Let browser know website is optimized for mobile-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<!-- Compiled and minified CSS -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{asset('css/materialize.min.css')}}"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- Compiled and minified CSS from web-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<!-- Compiled and minified JavaScript -->
+<!-- Compiled and minified JavaScript from web -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </head>
@@ -32,7 +33,7 @@
         <nav>
             <div class="nav-wrapper teal white">
                 <a class="brand-logo center black-text" href="{{ url('/') }}">
-                    {{ config('app.name', 'Comuni') }}<span class="green-text text-accent-4">Q</span>
+                    {{ config('app.name', 'Comuni') }}<span class=" green-text text-accent-4">Q</span>
                 </a>
 
                 <div class="container">
@@ -80,5 +81,8 @@
     </div>
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="{{ asset('js/materialize.min.js') }}"></script>
+        <!--JavaScript Compiled and minified from web-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     </body>
 </html>
