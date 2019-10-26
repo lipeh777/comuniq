@@ -12,10 +12,28 @@
                         </div>
                     @endif
 
-                    Você está logado!
                 </div>
             </div>
         </div>
     </div>
+    
+@if ($chamado ?? "")
+    <table class="table table-bordered">
+        <tr>
+            <th>Quantidade</th>
+            <th>Número do Tombamento</th>
+            <th>Descrção</th>
+        </tr>
+        <?php $q=1; ?>
+        @foreach ($chamado as $key => $value)
+          <tr>
+            <td>{{$q++}}</td>
+            <td>{{ $value->tombamento }}</td>
+            <td>{{ $value->descricao }}</td>
+          </tr>
+        @endforeach
+    </table>
+@endif
+
 
 @endsection
