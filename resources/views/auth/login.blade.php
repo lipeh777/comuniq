@@ -56,12 +56,12 @@
 
                     <div class="col s12">
                         <div class="input-field inline">
-                            <button type="submit" class="btn btn-primary card-panel teal accent-4">
+                            <button type="submit" class="btn btn-primary card-panel green accent-4">
                                 {{ __('Entrar') }}
                             </button>
 
                             @if (Route::has('password.request'))
-                                <a  href="{{ route('password.request') }}">
+                                <a  href="{{ route('password.request') }}" class="grey-text text-accent-4">
                                     {{ __('Esqueceu sua senha?') }}
                                 </a>
                             @endif
