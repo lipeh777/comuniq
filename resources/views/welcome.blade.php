@@ -15,7 +15,7 @@
       </div>
     </div>
   </div>
- 
+
   
     <div id="index-banner container">
       <h3 class="header center text-lighten-1">Vantagens de utilização do sistema</h3>
@@ -80,41 +80,5 @@
     </div>
   </div>
 
-  <!-- Rodapé -->
-<footer class="page-footer  green accent-4">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Grupo Comuniq</h5>
-          <p class="grey-text text-lighten-4">Nós do corpo de estudantes do 3° periodo de informática para internet, 
-          trabalhamos neste projeto como uma das nossas missões como desenvolvedores na disciplina de projeto e prática.
-          Qualquer ajuda ou suporte serão aceitas para a melhoria e continuação do desenvolvimento deste projeto.</p>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Navegação</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Ajuda</a></li>
-            <li><a class="white-text" href="#!">Dúvidas frequentes</a></li>
-            <li><a class="white-text" href="#!">Reportar Erros</a></li>
-            <li><a class="white-text" href="#!">Sobre</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Encontre-nos</h5>
-          <ul>
-            <li><a class="white-text lighten-1" href="https://github.com/lipeh777/comuniq">GitHub</a></li>
-            <li><a class="white-text lighten-1" href="#!">#</a></li>
-            <li><a class="white-text lighten-1" href="#!">#</a></li>            
-            <li><a class="white-text lighten-1" href="#!">#</a></i>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright black">
-      <div class="container center">
-      Desenvolvido por: <a href="#" class="white-text text-lighten-1"> IFPE - CAMPUS IGARASSU</a>
-      </div>
-    </div>
-  </footer>
 
 @endsection
