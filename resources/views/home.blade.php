@@ -2,38 +2,29 @@
 
 @section('content')
 
-    <div class="row right">
-        <div class="col s12">
-            <div class="card">
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                </div>
-            </div>
-        </div>
+<div class="row container">
+    <div class="card">
+        <table class="highlight">
+            <tr>
+                <th>Quantidade</th>
+                <th>Número do Tombamento</th>
+                <th>Descrição</th>
+            </tr>
+            <?php $q=1; ?>
+            @if ($chamado ?? "")
+                @foreach ($chamado as $key => $value)
+                  <tr>
+                    <td>{{$q++}}</td>
+                    <td>{{ $value->tombamento }}</td>
+                    <td>{{ $value->descricao }}</td>
+                  </tr>
+                @endforeach
+            @endif
+        </table>
     </div>
-    
-@if ($chamado ?? "")
-    <table class="table table-bordered">
-        <tr>
-            <th>Quantidade</th>
-            <th>Número do Tombamento</th>
-            <th>Descrção</th>
-        </tr>
-        <?php $q=1; ?>
-        @foreach ($chamado as $key => $value)
-          <tr>
-            <td>{{$q++}}</td>
-            <td>{{ $value->tombamento }}</td>
-            <td>{{ $value->descricao }}</td>
-          </tr>
-        @endforeach
-    </table>
-@endif
-
+    <div class="row center">
+        <a class="btn-large waves-effect waves-light  green accent-4 lighten-1" href="{{ url('chamado') }}">{{ __('Chamado') }}</a>
+    </div>
+</div>
 
 @endsection
