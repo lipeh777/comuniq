@@ -52,7 +52,7 @@
                         @endif
                     @else
                     <li>
-                        <a class="black-text" href="{{ route('/home') }}">{{ __('inicio') }}</a>
+                        <a class="black-text" href="{{ route('home') }}">{{ __('inicio') }}</a>
                     </li>
                         <li>
                             <a id="navbarDropdown" class="black-text" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
