@@ -8,12 +8,12 @@
 	define('STATUS_DESCRICAO',  4);
 
 		if ($status & STATUS_TOMBAMENTO) {
-    ...
+    
 		}
 
     	if (($status & STATUS_TOMBAMENTO) && ($status & STATUS_DESCRICAO)) {
 
-    ... }
+    	}
     ?>
 <div class="row container">
     <div class="card">
