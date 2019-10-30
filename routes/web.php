@@ -24,3 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/chamado', 'ChamadoController@index')->name('chamado_list');
 Route::get('/chamado', 'ChamadoController@create')->name('chamado_form');
 Route::get('/chamado', 'ChamadoController@store')->name('chamado_formSave');
+
+Route::resource('/observador', 'ObservadorController');
