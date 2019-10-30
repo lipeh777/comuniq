@@ -12,7 +12,8 @@
         "fideloper/proxy": "^4.0",
         "fzaninotto/faker": "^1.8",
         "laravel/framework": "^6.0",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "laravelcollective/html": "^6.0"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

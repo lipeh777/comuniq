@@ -176,7 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         // Appzcoder\CrudGenerador\CrudGeneradorServiceProvider::class,
-        // Collective\Html\HtmlServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
     ],
 
