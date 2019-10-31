@@ -20,7 +20,7 @@ class CreateChamadosTable extends Migration
             $table->unsignedBigInteger('fk_item_id')->nullable();
             $table->timestamps();
             $table->foreign('fk_users_id')->references('id')->on('users');
-            $table->foreign('fk_item_id')->references('id')->on('itens');
+            $table->foreign('fk_item_id')->references('id')->on('items');
         });
     }
 
