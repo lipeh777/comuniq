@@ -27,4 +27,4 @@ Route::get('/chamado', 'ChamadoController@create')->name('chamado_form');
 Route::get('/chamado', 'ChamadoController@store')->name('chamado_formSave');
 
 Route::resource('/observador', 'ObservadorController');
-Route::resource('/itemcadastro', 'ItemCadastroController');
+Route::resource('/itemcadastro', 'ItemController');
