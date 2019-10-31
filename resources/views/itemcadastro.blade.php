@@ -9,19 +9,9 @@
       <div class="card-content">
         <div class="row">
 
+    <!--  -->
 
-<div class="center container">
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
-    <form method="post" action="{{url('/create/ticket')}}">
+    <form method="post" action="{{ route('itemcadastro.store') }}"> <!-- {{url('/create/ticket')}} -->
         <div class="form-group">
             <input type="hidden" value="{{csrf_token()}}" name="_token" />
             <div class="input-field col s12">
@@ -33,7 +23,6 @@
         <button type="submit" class="btn btn-primary green accent-4">Cadastre</button>
         </form>
 
-
 </div>
 
 </div>
@@ -41,6 +30,33 @@
     </div>
   </div>
 </div>
+        <div class="container">
+            <div>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Funções</th>
+                        </tr>    
+                    </thead>
+                    <tbody>
+                        @foreach($item as $itens)
+                            <tr>
+                                <th>{{$itens->id}}</th>
+                                <td>{{ $itens->numero_tombamento }}</td>
+                                <td>
+                                    <a href="">Vizualizar</a>
+                                    <a href="">Editar</a>
+                                    <a href="">Deletar</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
 @endsection
 
 
