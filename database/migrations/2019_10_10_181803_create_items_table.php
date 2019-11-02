@@ -15,7 +15,7 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('numero_tombamento');
+            $table->string('numero_tombamento')->nullable();
             $table->unsignedBigInteger('fk_instituicoes_id')->nullable();
             $table->foreign('fk_instituicoes_id')->references('id')->on('instituicoes');
             $table->timestamps();
