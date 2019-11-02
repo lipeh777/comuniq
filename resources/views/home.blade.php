@@ -2,19 +2,6 @@
 
 @section('content')
 
-    <?php  
-    define('STATUS_QUANTIDADE', 1);
-	define('STATUS_TOMBAMENTO', 2);
-	define('STATUS_DESCRICAO',  4);
-
-		if ($status & STATUS_TOMBAMENTO) {
-    
-		}
-
-    	if (($status & STATUS_TOMBAMENTO) && ($status & STATUS_DESCRICAO)) {
-
-    	}
-    ?>
 <div class="row container">
     <div class="card">
         <table class="highlight">
