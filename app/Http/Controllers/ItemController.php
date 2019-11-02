@@ -12,6 +12,12 @@ class ItemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $item = Item::all();
@@ -26,6 +32,7 @@ class ItemController extends Controller
      */
     public function create()
     {
+        return view('create');
         //
     }
 
@@ -35,13 +42,15 @@ class ItemController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Item $item)
     {
-        $this->validate($request,[
-              'title'=>'string',
-            ]);
-        Item::create($request->all());
-        return redirect()->route('itemcadastro');
+        // $this->validate($request,[
+        //       'title'=>'string',
+        //     ]);
+        $item->numero_tombamento = $request->title;
+        $item->save();
+        // Item::create($request->all());
+        return redirect()->route('itemcadastro.index');
         //
     }
 
