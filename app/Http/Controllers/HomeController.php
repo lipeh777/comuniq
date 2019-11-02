@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Chamado;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -22,7 +25,8 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
-        return view('home');
+    {   
+        $chamado = Chamado::where('fk_users_id', auth()->user()->id)->get();
+        return view('home')->with(['chamado' => $chamado]);
     }
 }
