@@ -8,6 +8,6 @@ class Item extends Model
 {
     protected $fillable = ['numero_tombamento'];
     protected $guarded = ['id', 'fk_instituicoes_id'];
-    protected $table = 'item_patrimonios';
+    protected $table = 'items';
     //
 }
