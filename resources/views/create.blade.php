@@ -2,7 +2,15 @@
 
 @section('content')
 <div class="row">
+    <form action="{{ route('itemcadastro.import') }}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="file" name="file" />
+        </div>
+        <button class="btn btn-primary green accent-4">Importar Arquivo</button>
+    </form>
+</div>
 
+<div class="row">
 <form method="post" action="{{ route('itemcadastro.store') }}"> <!-- {{url('/create/ticket')}} -->
     @csrf
     <div class="form-group">
