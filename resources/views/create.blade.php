@@ -3,6 +3,7 @@
 @section('content')
 <div class="row">
     <form action="{{ route('itemcadastro.import') }}" method="post" enctype="multipart/form-data">
+    @csrf
         <div class="form-group">
             <input type="file" name="file" />
         </div>
