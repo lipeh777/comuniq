@@ -21,13 +21,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 //rotas de chamado
-
-Route::get('/chamado', 'ChamadoController@index')->name('chamado_list');
-Route::get('/chamado', 'ChamadoController@create')->name('chamado_form');
-Route::get('/chamado', 'ChamadoController@store')->name('chamado_formSave');
+Route::resource('/chamado','ChamadoController');
 
 Route::resource('/observador', 'ObservadorController');
 
 //rotas de item
 Route::resource('/itemcadastro', 'ItemController');
-Route::post('/itemcadastro', 'ItemController@import')->name('itemcadastro.import');
+Route::post('/itemimport', 'ImportController@import')->name('itemcadastro.import');
