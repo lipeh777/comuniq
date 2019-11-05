@@ -58,10 +58,17 @@ class ItemController extends Controller
         // $this->validate($request,[
         //       'title'=>'string',
         //     ]);
-        $item->numero_tombamento = $request->title;
-        $item->save();
+     
+            $con = Item::where('numero_tombamento', $request->title)->first();
+            if($con){
+            return redirect()->route('itemcadastro.index')->with('Erro');
+            }else{
+            $item->numero_tombamento = $request->title;
+            $item->save();
+            return redirect()->route('itemcadastro.index');
+            }
+        
         // Item::create($request->all());
-        return redirect()->route('itemcadastro.index');
         //
     }
 
