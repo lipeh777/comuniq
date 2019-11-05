@@ -5,18 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Item;
 
-use App\Imports\ItemImport;
-use Maatwebsite\Excel\Facades\Excel;
-use App\Http\Controllers\Controller;
 
 class ItemController extends Controller
 {
-    public function import() 
-    {
-        Excel::import(new ItemImport, request()->file('file'));
-        
-        return redirect('itemcadastro')->with('success', 'Arquivo importado com sucesso!');
-    }
 
     /**
      * Display a listing of the resource.
