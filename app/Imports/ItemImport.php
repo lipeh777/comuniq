@@ -5,7 +5,7 @@ namespace App\Imports;
 use App\Item;
 use Maatwebsite\Excel\Concerns\ToModel;
 
-class ItemImport implements ToModel, WithProgressBar
+class ItemImport implements ToModel
 {
     /**
     * @param array $row
