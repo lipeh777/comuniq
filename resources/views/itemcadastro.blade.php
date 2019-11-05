@@ -31,8 +31,6 @@
                                 <td>{{ $itens->numero_tombamento }}</td>
                                 <td>
                                     <a href="">Vizualizar</a>
-                                    <a href="">Editar</a>
-                                    <a href="">Deletar</a>
                                 </td>
                             </tr>
                         @endforeach
