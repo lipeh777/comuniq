@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Chamado;
+use App\Item;
+use Illuminate\Support\Facades\Auth;
 
 class ChamadoController extends Controller {
 
@@ -28,18 +30,18 @@ class ChamadoController extends Controller {
     public function store(Request $request){
 
         $tombamento = $request->get("tombamento");
-        // $chamado = new Chamado;
-        // $chamado->description = $request->descricao;
-        // $chamado->user = $request->users;
-        // $chamado->observadores = $request->observadores;
-        // $chamado->status = $request->status;
-        // $chamado->save();
-        $chamado = Chamado::where('descricao');
-            $this->validate($request,[
-              'descricao'=>'string|max:255',
-            ]);
-            Chamado::create($request->all());
+        $item = Item::where('numero_tombamento', $request->tombamento)->first();
+
+        if($item){
+            $chamado = new Chamado;
+            $chamado->descricao = $request->descricao;
+            $chamado->fk_users_id = Auth::user()->id;
+            $chamado->fk_item_id = $item->id;
+            $chamado->save();
             return redirect()->route('chamado.index')->with('message','Chamado criado com sucesso');
+        }else{
+            return redirect()->route('chamado.index')->with('message','errou, infiliz');
+        }    
 
     }
     public function show($id){
