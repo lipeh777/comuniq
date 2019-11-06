@@ -4,22 +4,22 @@
 
 <div class="row container">
     <div class="card">
-        <table class="highlight">
+        <table class="highlight centered">
+            <thead>
             <tr>
                 <th>Quantidade</th>
-                <th>Número do Tombamento</th>
                 <th>Descrição</th>
             </tr>
+            </thead>
             <?php $q=1; ?>
-            @if ($chamado ?? "")
-                @foreach ($chamado as $key => $value)
-                  <tr>
+            @foreach ($chamado as $key => $value)
+            <tbody>
+                <tr>
                     <td>{{$q++}}</td>
-                    <td>{{ $value->tombamento }}</td>
                     <td>{{ $value->descricao }}</td>
-                  </tr>
-                @endforeach
-            @endif
+                </tr>
+            </tbody>
+            @endforeach
         </table>
     </div>
 
